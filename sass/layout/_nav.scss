@@ -1,0 +1,25 @@
+.nav {
+  margin-left: 8rem;
+
+  &__ul {
+    @extend %aligncenter;
+  }
+
+  &__list {
+    list-style: none;
+    margin-right: 4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  &--footer {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+}

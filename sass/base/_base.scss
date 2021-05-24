@@ -1,0 +1,122 @@
+.h3 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+
+  &--build {
+    width: 44.5rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -5.8rem;
+      left: 0;
+
+      @include ba(5rem, 4px) {
+        background-color: $color-light-coral;
+      }
+    }
+  }
+
+  &--success {
+    width: 93.2rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__span {
+      color: $color-blue-c7
+    }
+  }
+
+  &--started {
+    color: $color-green-34
+  }
+}
+
+.p-18 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  display: block;
+
+  &--build {
+    color: $color-light-coral;
+    margin-bottom: 1.6rem;
+  }
+
+  &--success {
+    margin-bottom: .2rem;
+    color: $color-blue-c7;
+  }
+}
+
+.p-15 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: $color-white;
+  display: block;
+
+  &--build {
+    opacity: .8;
+  }
+
+  &--success {
+    margin-bottom: 2.4rem;
+  }
+
+  &--footer {
+    font-style: normal;
+    width: 44.5rem;
+    opacity: .6;
+  }
+
+  &--communication {
+    margin-top: 5.1rem;
+    opacity: .6;
+  }
+}
+
+.box {
+  width: 35rem;
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 3.6rem;
+
+  background-image: url(../images/qoshtirnoq.png);
+  background-size: 6.7rem 5.6rem;
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 50%;
+
+    margin-top: 3.2rem;
+
+  }
+
+  &--setora {
+    &::after {
+      background-image: url(../images/setora.png);
+    }
+  }
+
+  &--malika {
+    &::after {
+      background-image: url(../images/malika.png);
+    }
+  }
+
+  &--jek {
+    &::after {
+      background-image: url(../images/jek.png);
+    }
+  }
+
+}

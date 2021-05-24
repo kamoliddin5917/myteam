@@ -1,0 +1,181 @@
+body {
+  background-color: $color-green-56;
+  color: $color-white;
+}
+
+.logo {
+  text-decoration: none;
+  display: inline-block;
+
+  &_img {
+    width: 16rem;
+    height: 4rem;
+  }
+}
+
+// section1 talent
+.talent {
+  margin-top: calc(12.9rem - 6.7rem);
+
+  background-image: url(../images/talent-img-1.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem;
+  background-position: calc(50% - 68rem) 6rem;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/talent-img-1@2x.png);
+  }
+
+  & .container {
+    @extend %jsb;
+    background-image: url(../images/talent-img-2.png);
+    background-repeat: no-repeat;
+    background-size: 35.8rem 10rem;
+    background-position: right bottom;
+    padding-bottom: calc(25rem - 6.7rem);
+
+    @media only screen and (min-resolution:192dpi)and(min-width:376px),
+    (min-width:2000px) {
+      background-image: url(../images/talent-img-2@2x.png);
+    }
+  }
+
+  &__h1 {
+    font-weight: bold;
+    font-size: 10rem;
+    line-height: 10rem;
+    width: 55.5rem;
+  }
+
+  &__span {
+    color: $color-light-coral;
+  }
+
+  &__p {
+    width: 44.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+
+
+    &::before {
+      @include ba(5rem, 4px) {
+        background-color: $color-blue-c7;
+      }
+
+      margin-bottom: 8rem;
+      display: flex;
+    }
+  }
+}
+
+// section2 build
+
+.build {
+  background-color: $color-green-34;
+  padding-top: 19.8rem;
+  padding-bottom: calc(14rem - 3.2rem);
+  background-image: url(../images/section2-img.png);
+  background-repeat: no-repeat;
+  background-size: 20rem, 24.4rem;
+  background-position: calc(50% + 68.5rem) bottom;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section2-img@2x.png);
+  }
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__list {
+    list-style: none;
+
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+
+    position: relative;
+
+    &-img {
+      width: 5.6rem;
+      height: 5.6rem;
+
+      position: absolute;
+      top: -.6rem;
+      left: -1.8rem;
+    }
+
+    &::before {
+      @include ba(5.6rem, 5.6rem) {
+        background-color: $color-blue-69;
+        border-radius: 50%;
+        margin-right: 2.3rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    width: 44.5rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+// section 3 SUCCESS
+
+.success {
+  background-color: $color-green-47;
+  text-align: center;
+  padding-top: 14rem;
+  padding-bottom: 15.1rem;
+
+  background-image: url(../images/section3-img-1.png), url(../images/section3-img-2.png);
+  background-size: 14.7rem 10rem, 20rem 10rem;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 60.2rem) top, calc(50% + 57.6rem) bottom;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section3-img-1@2x.png), url(../images/section3-img-2@2x.png);
+  }
+}
+
+.boxs {
+  @extend %jsb;
+  margin-top: calc(9.2rem - 3.6rem);
+}
+
+.box__p-13 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: $color-white;
+
+  display: block;
+}
+
+// section 4 STARTED
+
+.started {
+  padding: 7.6rem 0;
+  background-color: $color-light-coral;
+  background-image: url(../images/section4-img.png);
+  background-size: 20rem 14.4rem;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 57.6rem) bottom;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

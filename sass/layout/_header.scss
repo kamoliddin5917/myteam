@@ -1,0 +1,6 @@
+.header {
+  & .container {
+    @extend %aligncenter;
+    margin-top: 7.3rem;
+  }
+}

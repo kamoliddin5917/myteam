@@ -1,0 +1,40 @@
+.footer {
+  background-color: $color-green-29;
+  padding: 4.8rem 0;
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+  &__communication {
+    text-align: end;
+  }
+
+  &__ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 1.6rem;
+  }
+
+}
+
+.tell {
+  text-decoration: none;
+  display: block;
+  color: $color-white;
+}

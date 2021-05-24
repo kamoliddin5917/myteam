@@ -9,15 +9,29 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 62.5%; // 16px % 62.5 = 10px
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Livvic", sans-serif;
 }
 
 .container {
   max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
+
+// GREEN
+$color-green-56:#014E56;
+$color-green-47: #004047;
+$color-green-34: #012F34;
+$color-green-29: #002529;
+// BLUE
+$color-blue-c7:#79C8C7;
+$color-blue-69: #2C6269;
+// WHITE
+$color-white:#fff;
+// LIGHT CORAL
+$color-light-coral: #F67E7E;

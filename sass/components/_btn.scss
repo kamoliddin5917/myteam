@@ -1,0 +1,20 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  padding: 1rem 3.3rem;
+  border: .2rem solid $color-white;
+  border-radius: 2.4rem;
+
+  &--header {
+    margin-left: auto;
+  }
+
+  &--started {
+    color: $color-green-34;
+    border: .2rem solid $color-green-34;
+  }
+}
