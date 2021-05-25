@@ -20,7 +20,8 @@ body {
   background-image: url(../images/talent-img-1.png);
   background-repeat: no-repeat;
   background-size: 20rem 20rem;
-  background-position: calc(50% - 68rem) 6rem;
+  // background-position: calc(50% - 68rem) 6rem;
+  background-position: -10rem 6rem;
 
   @media only screen and (min-resolution:192dpi)and(min-width:376px),
   (min-width:2000px) {
@@ -80,7 +81,8 @@ body {
   background-image: url(../images/section2-img.png);
   background-repeat: no-repeat;
   background-size: 20rem, 24.4rem;
-  background-position: calc(50% + 68.5rem) bottom;
+  // background-position: calc(50% + 68.5rem) bottom;
+  background-position: calc(100% + 10rem) bottom;
 
   @media only screen and (min-resolution:192dpi)and(min-width:376px),
   (min-width:2000px) {
@@ -96,6 +98,9 @@ body {
   &__list {
     list-style: none;
 
+    &-contact {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__link {
@@ -121,6 +126,10 @@ body {
         margin-top: 1rem;
       }
     }
+
+    &-contact {
+      align-items: center;
+    }
   }
 
   &__text {
@@ -141,7 +150,8 @@ body {
   background-image: url(../images/section3-img-1.png), url(../images/section3-img-2.png);
   background-size: 14.7rem 10rem, 20rem 10rem;
   background-repeat: no-repeat;
-  background-position: calc(50% - 60.2rem) top, calc(50% + 57.6rem) bottom;
+  // background-position: calc(50% - 60.2rem) top, calc(50% + 57.6rem) bottom;
+  background-position: left top, right bottom;
 
   @media only screen and (min-resolution:192dpi)and(min-width:376px),
   (min-width:2000px) {
@@ -171,7 +181,13 @@ body {
   background-image: url(../images/section4-img.png);
   background-size: 20rem 14.4rem;
   background-repeat: no-repeat;
-  background-position: calc(50% - 57.6rem) bottom;
+  // background-position: calc(50% - 57.6rem) bottom;
+  background-position: left bottom;
+
+  @media only screen and(min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../../images/section4-img@2x.png);
+  }
 
   & .container {
     display: flex;

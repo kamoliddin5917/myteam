@@ -11,10 +11,55 @@
 
   &--header {
     margin-left: auto;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-green-29;
+      transition: all .4s ease-in-out;
+    }
+
+    &:active {
+      opacity: .25;
+      transition: all .2s ease-out;
+      background-color: inherit;
+      color: inherit;
+    }
   }
 
   &--started {
     color: $color-green-34;
     border: .2rem solid $color-green-34;
+
+    &:hover {
+      background-color: $color-green-34;
+      color: $color-white;
+      transition: all .4s ease-in-out;
+    }
+
+    &:active {
+      background-color: $color-white;
+      color: $color-green-34;
+      opacity: .25;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &--form {
+    color: $color-green-47;
+    cursor: pointer;
+    border: none;
+
+
+    &:hover {
+      background-color: $color-blue-c7;
+      transition: all .4s ease-in;
+    }
+
+    &:active {
+      opacity: .25;
+      background-color: $color-white;
+      transition: all .2s ease-in;
+    }
+
   }
 }

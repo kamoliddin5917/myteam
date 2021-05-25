@@ -48,6 +48,28 @@
     margin-bottom: .2rem;
     color: $color-blue-c7;
   }
+
+  &--about {
+    width: 73rem;
+
+    &::before {
+      @include ba(5rem, .4rem) {
+        background-color: $color-light-coral;
+      }
+
+      display: flex;
+      margin-bottom: 4rem;
+    }
+
+    &-meet {
+      color: $color-blue-c7;
+      width: 30.2rem;
+    }
+  }
+
+  &--contact {
+    color: $color-white;
+  }
 }
 
 .p-15 {
@@ -74,6 +96,12 @@
   &--communication {
     margin-top: 5.1rem;
     opacity: .6;
+  }
+
+  &--about-meet {
+    font-style: italic;
+    font-weight: 500;
+    width: 30.2rem;
   }
 }
 
@@ -119,4 +147,63 @@
     }
   }
 
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 10rem;
+  color: $color-white;
+}
+
+.director {
+  text-decoration: none;
+  // display: inline-block;
+  display: block;
+  background-color: $color-green-34;
+  padding: 3.2rem 2.4rem 5.6rem 2.4rem;
+  margin-bottom: 7.6rem;
+
+  position: relative;
+
+  &::before {
+    @include badimg(9.6rem, 9.6rem, '../images/nikita.png');
+    margin-bottom: 1.6rem;
+  }
+
+  &--cristian {
+    &::before {
+      background-image: url(../images/cristian.png);
+    }
+  }
+
+  &--cruz {
+    &::before {
+      background-image: url(../images/cruz.png);
+    }
+  }
+
+  &--drake {
+    &::before {
+      background-image: url(../images/drake.png);
+    }
+  }
+
+  &--griffin {
+    &::before {
+      background-image: url(../images/griffin.png);
+    }
+  }
+
+  &--aden {
+    padding-top: 3.9rem;
+
+    &::before {
+      widows: 0;
+      height: 0;
+      background-image: none;
+      margin-bottom: 0;
+    }
+
+  }
 }

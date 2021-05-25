@@ -1,0 +1,80 @@
+.contact {
+  margin-top: 12rem;
+  padding-bottom: 12rem;
+
+  background-image: url(../images/section2-img-about.png), url(../images/contact-img-2.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem, 20rem 25rem;
+  // background-position: calc(50% - 68rem) top, calc(50% + 68rem) bottom;
+  background-position: -10rem top, calc(100% + 10rem) bottom;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section2-img-about@2x.png), url(../images/contact-img-2@2x.png);
+  }
+
+  &__right {
+    width: 54.2rem;
+
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: .1rem solid $color-white;
+    padding: .2rem 1.4rem 1.6rem 1.4rem;
+    margin-bottom: 2.4rem;
+
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.115385px;
+    mix-blend-mode: normal;
+    opacity: .6;
+    color: $color-white;
+
+    &::placeholder {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: -0.115385px;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+      color: $color-white;
+
+    }
+
+    &:valid {
+      opacity: 1;
+    }
+
+    &:invalid {
+      color: $color-light-coral;
+      opacity: .6;
+      border-color: $color-light-coral;
+    }
+
+    &-textarea {
+      padding-bottom: 5.8rem;
+      resize: none;
+    }
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+.h4 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: $color-light-coral;
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}

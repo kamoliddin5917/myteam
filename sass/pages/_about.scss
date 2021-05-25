@@ -1,0 +1,129 @@
+.about {
+  padding: 12rem 0;
+
+  @include bacimg('../images/section1-img-about.png', 20rem 20rem) {
+    // background-position: calc(50% + 68.4rem) bottom;
+    background-position: calc(100% + 10rem) bottom;
+  }
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section1-img-about@2x.png);
+  }
+
+  & .container {
+    @extend %jsb;
+  }
+}
+
+.meet {
+  background-color: $color-green-47;
+  text-align: center;
+
+  background-image: url(../images/section2-img-about.png), url(../images/section3-img-1.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem, 14.7rem 10rem;
+  // background-position: calc(50% - 68rem) top, calc(50% + 63rem) bottom;
+  background-position: -10rem top, 100% bottom;
+
+  @media only screen and(min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section2-img-about@2x.png), url(../images/section3-img-1@2x.png);
+  }
+
+  padding-top: 14rem;
+  padding-bottom: calc(14rem - 7.6rem);
+}
+
+.directors {
+  margin-top: 6.4rem;
+  @extend %jsb;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+
+.dumaloq {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background-color: $color-light-coral;
+
+  position: absolute;
+  top: calc(100% - 2.8rem);
+  left: calc(50% - 2.8rem);
+
+  &::before {
+    @include ba(1.6rem, .4rem) {
+      background-color: $color-green-34;
+    }
+
+    position: absolute;
+    top: calc(50% - .2rem);
+    left: calc(50% - .8rem);
+
+  }
+
+  &::after {
+    @include ba(1.6rem, .4rem) {
+      background-color: $color-green-34;
+      transform: rotate(90deg);
+    }
+
+    position: absolute;
+    top: calc(50% - .2rem);
+    left: calc(50% - .8rem);
+
+  }
+
+  &--aden {
+    background-color: $color-blue-c7;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.img {
+  display: inline-block;
+  margin-top: 2.4rem;
+
+  &__twitter {
+    width: 2.4rem;
+    height: 2rem;
+    margin-right: 1.6rem;
+  }
+
+  &__in {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.clients {
+  background-color: $color-green-34;
+  text-align: center;
+  padding: 14rem 0;
+
+  background-image: url(../../images/section2-img.png);
+  background-repeat: no-repeat;
+  background-size: 20rem, 20rem;
+  // background-position: calc(50% - 58rem) -4.6rem;
+  background-position: 0 -4.6rem;
+
+  @media only screen and(min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section2-img@2x.png);
+  }
+
+  &__ul {
+    list-style: none;
+    margin-top: 6.4rem;
+    @extend %jsb;
+  }
+}

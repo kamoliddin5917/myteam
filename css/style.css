@@ -47,7 +47,7 @@ body {
   display: flex;
   align-items: center; }
 
-.talent .container, .boxs {
+.talent .container, .boxs, .about .container, .directors, .clients__ul {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -98,6 +98,21 @@ body {
   .p-18--success {
     margin-bottom: .2rem;
     color: #79C8C7; }
+  .p-18--about {
+    width: 73rem; }
+    .p-18--about::before {
+      content: "";
+      display: inline-block;
+      width: 5rem;
+      height: 0.4rem;
+      background-color: #F67E7E;
+      display: flex;
+      margin-bottom: 4rem; }
+    .p-18--about-meet {
+      color: #79C8C7;
+      width: 30.2rem; }
+  .p-18--contact {
+    color: #fff; }
 
 .p-15 {
   font-weight: 600;
@@ -116,6 +131,10 @@ body {
   .p-15--communication {
     margin-top: 5.1rem;
     opacity: .6; }
+  .p-15--about-meet {
+    font-style: italic;
+    font-weight: 500;
+    width: 30.2rem; }
 
 .box {
   width: 35rem;
@@ -141,6 +160,44 @@ body {
     background-image: url(../images/malika.png); }
   .box--jek::after {
     background-image: url(../images/jek.png); }
+
+.h2 {
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 10rem;
+  color: #fff; }
+
+.director {
+  text-decoration: none;
+  display: block;
+  background-color: #012F34;
+  padding: 3.2rem 2.4rem 5.6rem 2.4rem;
+  margin-bottom: 7.6rem;
+  position: relative; }
+  .director::before {
+    content: "";
+    display: inline-block;
+    width: 9.6rem;
+    height: 9.6rem;
+    background-image: url("../images/nikita.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 1.6rem; }
+  .director--cristian::before {
+    background-image: url(../images/cristian.png); }
+  .director--cruz::before {
+    background-image: url(../images/cruz.png); }
+  .director--drake::before {
+    background-image: url(../images/drake.png); }
+  .director--griffin::before {
+    background-image: url(../images/griffin.png); }
+  .director--aden {
+    padding-top: 3.9rem; }
+    .director--aden::before {
+      widows: 0;
+      height: 0;
+      background-image: none;
+      margin-bottom: 0; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -459,9 +516,38 @@ template {
   border-radius: 2.4rem; }
   .btn--header {
     margin-left: auto; }
+    .btn--header:hover {
+      background-color: #fff;
+      color: #002529;
+      transition: all .4s ease-in-out; }
+    .btn--header:active {
+      opacity: .25;
+      transition: all .2s ease-out;
+      background-color: inherit;
+      color: inherit; }
   .btn--started {
     color: #012F34;
     border: 0.2rem solid #012F34; }
+    .btn--started:hover {
+      background-color: #012F34;
+      color: #fff;
+      transition: all .4s ease-in-out; }
+    .btn--started:active {
+      background-color: #fff;
+      color: #012F34;
+      opacity: .25;
+      transition: all .2s ease-in-out; }
+  .btn--form {
+    color: #004047;
+    cursor: pointer;
+    border: none; }
+    .btn--form:hover {
+      background-color: #79C8C7;
+      transition: all .4s ease-in; }
+    .btn--form:active {
+      opacity: .25;
+      background-color: #fff;
+      transition: all .2s ease-in; }
 
 .header .container {
   margin-top: 7.3rem; }
@@ -523,7 +609,7 @@ body {
   background-image: url(../images/talent-img-1.png);
   background-repeat: no-repeat;
   background-size: 20rem 20rem;
-  background-position: calc(50% - 68rem) 6rem; }
+  background-position: -10rem 6rem; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
     .talent {
       background-image: url(../images/talent-img-1@2x.png); } }
@@ -564,7 +650,7 @@ body {
   background-image: url(../images/section2-img.png);
   background-repeat: no-repeat;
   background-size: 20rem, 24.4rem;
-  background-position: calc(50% + 68.5rem) bottom; }
+  background-position: calc(100% + 10rem) bottom; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
     .build {
       background-image: url(../images/section2-img@2x.png); } }
@@ -574,6 +660,8 @@ body {
     justify-content: space-between; }
   .build__list {
     list-style: none; }
+    .build__list-contact {
+      margin-bottom: 1.5rem; }
   .build__link {
     text-decoration: none;
     display: flex;
@@ -593,6 +681,8 @@ body {
       border-radius: 50%;
       margin-right: 2.3rem;
       margin-top: 1rem; }
+    .build__link-contact {
+      align-items: center; }
   .build__text {
     display: inline-block;
     width: 44.5rem;
@@ -606,7 +696,7 @@ body {
   background-image: url(../images/section3-img-1.png), url(../images/section3-img-2.png);
   background-size: 14.7rem 10rem, 20rem 10rem;
   background-repeat: no-repeat;
-  background-position: calc(50% - 60.2rem) top, calc(50% + 57.6rem) bottom; }
+  background-position: left top, right bottom; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
     .success {
       background-image: url(../images/section3-img-1@2x.png), url(../images/section3-img-2@2x.png); } }
@@ -627,8 +717,156 @@ body {
   background-image: url(../images/section4-img.png);
   background-size: 20rem 14.4rem;
   background-repeat: no-repeat;
-  background-position: calc(50% - 57.6rem) bottom; }
+  background-position: left bottom; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
+    .started {
+      background-image: url(../../images/section4-img@2x.png); } }
   .started .container {
     display: flex;
     align-items: center;
     justify-content: space-around; }
+
+.about {
+  padding: 12rem 0;
+  background-image: url("../images/section1-img-about.png");
+  background-size: 20rem 20rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 10rem) bottom; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
+    .about {
+      background-image: url(../images/section1-img-about@2x.png); } }
+
+.meet {
+  background-color: #004047;
+  text-align: center;
+  background-image: url(../images/section2-img-about.png), url(../images/section3-img-1.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem, 14.7rem 10rem;
+  background-position: -10rem top, 100% bottom;
+  padding-top: 14rem;
+  padding-bottom: calc(14rem - 7.6rem); }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
+    .meet {
+      background-image: url(../images/section2-img-about@2x.png), url(../images/section3-img-1@2x.png); } }
+
+.directors {
+  margin-top: 6.4rem;
+  flex-wrap: wrap;
+  list-style: none; }
+
+.dumaloq {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background-color: #F67E7E;
+  position: absolute;
+  top: calc(100% - 2.8rem);
+  left: calc(50% - 2.8rem); }
+  .dumaloq::before {
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.4rem;
+    background-color: #012F34;
+    position: absolute;
+    top: calc(50% - .2rem);
+    left: calc(50% - .8rem); }
+  .dumaloq::after {
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.4rem;
+    background-color: #012F34;
+    transform: rotate(90deg);
+    position: absolute;
+    top: calc(50% - .2rem);
+    left: calc(50% - .8rem); }
+  .dumaloq--aden {
+    background-color: #79C8C7; }
+    .dumaloq--aden::before {
+      transform: rotate(45deg); }
+    .dumaloq--aden::after {
+      transform: rotate(-45deg); }
+
+.img {
+  display: inline-block;
+  margin-top: 2.4rem; }
+  .img__twitter {
+    width: 2.4rem;
+    height: 2rem;
+    margin-right: 1.6rem; }
+  .img__in {
+    width: 2rem;
+    height: 2rem; }
+
+.clients {
+  background-color: #012F34;
+  text-align: center;
+  padding: 14rem 0;
+  background-image: url(../../images/section2-img.png);
+  background-repeat: no-repeat;
+  background-size: 20rem, 20rem;
+  background-position: 0 -4.6rem; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
+    .clients {
+      background-image: url(../images/section2-img@2x.png); } }
+  .clients__ul {
+    list-style: none;
+    margin-top: 6.4rem; }
+
+.contact {
+  margin-top: 12rem;
+  padding-bottom: 12rem;
+  background-image: url(../images/section2-img-about.png), url(../images/contact-img-2.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem, 20rem 25rem;
+  background-position: -10rem top, calc(100% + 10rem) bottom; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 376px), (min-width: 2000px) {
+    .contact {
+      background-image: url(../images/section2-img-about@2x.png), url(../images/contact-img-2@2x.png); } }
+  .contact__right {
+    width: 54.2rem; }
+  .contact__input {
+    display: block;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: 0.1rem solid #fff;
+    padding: .2rem 1.4rem 1.6rem 1.4rem;
+    margin-bottom: 2.4rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.115385px;
+    mix-blend-mode: normal;
+    opacity: .6;
+    color: #fff; }
+    .contact__input::placeholder {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: -0.115385px;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+      color: #fff; }
+    .contact__input:valid {
+      opacity: 1; }
+    .contact__input:invalid {
+      color: #F67E7E;
+      opacity: .6;
+      border-color: #F67E7E; }
+    .contact__input-textarea {
+      padding-bottom: 5.8rem;
+      resize: none; }
+  .contact .container {
+    display: flex;
+    justify-content: space-between; }
+
+.h4 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #F67E7E;
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem; }
