@@ -2,5 +2,9 @@
   & .container {
     @extend %aligncenter;
     margin-top: 7.3rem;
+
+    @include respond(tablet) {
+      margin-top: 6.4rem;
+    }
   }
 }

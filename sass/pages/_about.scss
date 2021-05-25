@@ -1,6 +1,10 @@
 .about {
   padding: 12rem 0;
 
+  @include respond(tablet) {
+    padding: 11.2rem 0;
+  }
+
   @include bacimg('../images/section1-img-about.png', 20rem 20rem) {
     // background-position: calc(50% + 68.4rem) bottom;
     background-position: calc(100% + 10rem) bottom;
@@ -13,6 +17,11 @@
 
   & .container {
     @extend %jsb;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 }
 
@@ -40,6 +49,16 @@
   @extend %jsb;
   flex-wrap: wrap;
   list-style: none;
+
+  @include respond(tablet) {
+    justify-content: center;
+  }
+
+  @include respond(tablet) {
+    .director:not(:nth-child(even)) {
+      margin-right: 10px;
+    }
+  }
 }
 
 
@@ -126,4 +145,35 @@
     margin-top: 6.4rem;
     @extend %jsb;
   }
+
+  @include respond(tablet) {
+    padding: 10rem 0;
+    background-position: 0 -14.6rem;
+
+    &__img-logo-1 {
+      width: 10.3rem;
+      height: 1.7rem;
+    }
+
+    &__img-logo-2 {
+      width: 10.3rem;
+    }
+
+    &__img-logo-3 {
+      width: 11.6rem;
+    }
+
+    &__img-logo-4 {
+      width: 10.8rem;
+    }
+
+    &__img-logo-5 {
+      width: 7rem;
+    }
+
+  }
+
+
+
+
 }

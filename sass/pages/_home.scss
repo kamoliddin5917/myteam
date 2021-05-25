@@ -28,6 +28,12 @@ body {
     background-image: url(../images/talent-img-1@2x.png);
   }
 
+  @include respond(tablet) {
+    background-image: none;
+    text-align: center;
+    margin-top: calc(11.2rem - 6.7rem);
+  }
+
   & .container {
     @extend %jsb;
     background-image: url(../images/talent-img-2.png);
@@ -40,6 +46,12 @@ body {
     (min-width:2000px) {
       background-image: url(../images/talent-img-2@2x.png);
     }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      background-position: center bottom;
+      padding-bottom: calc(25.6rem - 6.7rem);
+    }
   }
 
   &__h1 {
@@ -47,6 +59,11 @@ body {
     font-size: 10rem;
     line-height: 10rem;
     width: 55.5rem;
+
+    @include respond(tablet) {
+      font-size: 6.4rem;
+      line-height: 5.6rem;
+    }
   }
 
   &__span {
@@ -68,8 +85,15 @@ body {
 
       margin-bottom: 8rem;
       display: flex;
+
+      @include respond(tablet) {
+        display: none;
+      }
     }
+
   }
+
+
 }
 
 // section2 build
@@ -89,10 +113,21 @@ body {
     background-image: url(../images/section2-img@2x.png);
   }
 
+  @include respond(tablet) {
+    background-position: calc(100% + 10rem) top;
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 3.2rem);
+  }
+
   & .container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      padding: 0 9.8rem;
+    }
   }
 
   &__list {
@@ -157,11 +192,20 @@ body {
   (min-width:2000px) {
     background-image: url(../images/section3-img-1@2x.png), url(../images/section3-img-2@2x.png);
   }
+
+  @include respond(tablet) {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.8rem);
+  }
 }
 
 .boxs {
   @extend %jsb;
   margin-top: calc(9.2rem - 3.6rem);
+
+  @include respond(tablet) {
+    flex-direction: column;
+  }
 }
 
 .box__p-13 {
@@ -187,6 +231,10 @@ body {
   @media only screen and(min-resolution:192dpi)and(min-width:376px),
   (min-width:2000px) {
     background-image: url(../../images/section4-img@2x.png);
+  }
+
+  @include respond (tablet) {
+    background-position: left 7.8rem;
   }
 
   & .container {

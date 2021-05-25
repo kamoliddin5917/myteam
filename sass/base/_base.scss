@@ -3,9 +3,18 @@
   font-size: 4.8rem;
   line-height: 4.8rem;
 
+  @include respond(tablet) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
   &--build {
     width: 44.5rem;
     position: relative;
+
+    @include respond(tablet) {
+      margin-bottom: 6.4rem;
+    }
 
     &::before {
       position: absolute;
@@ -23,6 +32,10 @@
     margin-right: auto;
     margin-left: auto;
 
+    @include respond (tablet) {
+      width: 57.3rem;
+    }
+
     &__span {
       color: $color-blue-c7
     }
@@ -39,6 +52,10 @@
   line-height: 2.8rem;
   display: block;
 
+  @include respond(tablet) {
+    font-size: 1.5rem;
+  }
+
   &--build {
     color: $color-light-coral;
     margin-bottom: 1.6rem;
@@ -52,6 +69,10 @@
   &--about {
     width: 73rem;
 
+    @include respond(tablet) {
+      width: 46rem;
+    }
+
     &::before {
       @include ba(5rem, .4rem) {
         background-color: $color-light-coral;
@@ -59,11 +80,19 @@
 
       display: flex;
       margin-bottom: 4rem;
+
+      @include respond(tablet) {
+        display: none;
+      }
     }
 
     &-meet {
       color: $color-blue-c7;
       width: 30.2rem;
+
+      @include respond(tablet) {
+        width: 23.3rem;
+      }
     }
   }
 
@@ -85,23 +114,41 @@
 
   &--success {
     margin-bottom: 2.4rem;
+
+    @include respond(tablet) {
+      width: 57.3rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   &--footer {
     font-style: normal;
     width: 44.5rem;
     opacity: .6;
+
+    @include respond(tablet) {
+      width: 28rem;
+      text-align: end;
+    }
   }
 
   &--communication {
     margin-top: 5.1rem;
     opacity: .6;
+
+    @include respond(tablet) {
+      margin-top: 0;
+    }
   }
 
   &--about-meet {
     font-style: italic;
     font-weight: 500;
     width: 30.2rem;
+
+    @include respond(tablet) {
+      width: 23.3rem;
+    }
   }
 }
 
@@ -116,6 +163,11 @@
   background-repeat: no-repeat;
   background-position: center 0;
 
+  @include respond(tablet) {
+    width: 57.3rem;
+    margin-bottom: 4.8rem;
+  }
+
   &::after {
     content: "";
     display: inline-block;
@@ -127,6 +179,9 @@
 
     margin-top: 3.2rem;
 
+    @include respond(tablet) {
+      margin-top: 1.6rem;
+    }
   }
 
   &--setora {
@@ -154,6 +209,11 @@
   font-size: 6.4rem;
   line-height: 10rem;
   color: $color-white;
+
+  @include respond(tablet) {
+    margin-bottom: 2.4rem;
+    line-height: 5.6rem;
+  }
 }
 
 .director {
@@ -165,6 +225,8 @@
   margin-bottom: 7.6rem;
 
   position: relative;
+
+
 
   &::before {
     @include badimg(9.6rem, 9.6rem, '../images/nikita.png');
