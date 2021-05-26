@@ -1,9 +1,10 @@
-.main {
-  z-index: -10;
-}
+// .main {
+//   z-index: -10;
+// }
 
 .modal {
   visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,8 +13,8 @@
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  z-index: 100;
 
+  // z-index: 5;
 
   &__body {
     background-color: $color-blue-69;
@@ -25,6 +26,7 @@
     background-repeat: no-repeat;
     background-size: 20rem 20rem;
     background-position: calc(100% + 10rem) bottom;
+    z-index: 10;
 
     @media only screen and(min-resolution:192dpi)and(min-width:376px),
     (min-width:2000px) {
@@ -73,13 +75,13 @@
     display: none;
   }
 
-  &__input:checked {
-    z-index: 1;
-  }
+
 
   &__input:checked~.modal {
     visibility: visible;
-    z-index: -1;
+    opacity: 1;
+    z-index: 10;
+    transition: all .4s cubic-bezier(0, 1.32, .96, .46)
   }
 
   &__input:checked+.header__label .header__hamburger {
@@ -105,6 +107,9 @@
   &__label {
     cursor: pointer;
     display: none;
+
+    position: relative;
+    z-index: 22;
 
     @include respond(phone) {
       display: block;
