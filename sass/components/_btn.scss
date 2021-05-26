@@ -12,6 +12,10 @@
   &--header {
     margin-left: auto;
 
+    @include respond(phone) {
+      display: none;
+    }
+
     &:hover {
       background-color: $color-white;
       color: $color-green-29;

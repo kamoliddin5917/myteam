@@ -10,6 +10,11 @@ body {
   &_img {
     width: 16rem;
     height: 4rem;
+
+    @include respond(phone) {
+      width: 12.8rem;
+      height: 3.2rem;
+    }
   }
 }
 
@@ -34,6 +39,10 @@ body {
     margin-top: calc(11.2rem - 6.7rem);
   }
 
+  @include respond(phone) {
+    margin-top: 8rem;
+  }
+
   & .container {
     @extend %jsb;
     background-image: url(../images/talent-img-2.png);
@@ -52,6 +61,11 @@ body {
       background-position: center bottom;
       padding-bottom: calc(25.6rem - 6.7rem);
     }
+
+    @include respond(phone) {
+      padding-bottom: 19.7rem;
+    }
+
   }
 
   &__h1 {
@@ -63,6 +77,14 @@ body {
     @include respond(tablet) {
       font-size: 6.4rem;
       line-height: 5.6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 24rem;
+      margin-bottom: 1.8rem;
+      margin-top: 0;
     }
   }
 
@@ -76,7 +98,10 @@ body {
     font-size: 1.8rem;
     line-height: 2.8rem;
 
-
+    @include respond(phone) {
+      width: 32.7rem;
+      font-size: 1.5rem;
+    }
 
     &::before {
       @include ba(5rem, 4px) {
@@ -119,6 +144,10 @@ body {
     padding-bottom: calc(10rem - 3.2rem);
   }
 
+  @include respond(phone) {
+    padding-bottom: calc(6.4rem - 4.8rem);
+  }
+
   & .container {
     display: flex;
     align-items: flex-start;
@@ -127,6 +156,17 @@ body {
     @include respond(tablet) {
       flex-direction: column;
       padding: 0 9.8rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__ul {
+    @include respond(phone) {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -144,6 +184,11 @@ body {
 
     position: relative;
 
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &-img {
       width: 5.6rem;
       height: 5.6rem;
@@ -151,6 +196,18 @@ body {
       position: absolute;
       top: -.6rem;
       left: -1.8rem;
+
+      @include respond(phone) {
+        top: -1.5rem;
+        left: 12rem;
+      }
+
+      &-contact {
+        @include respond(phone) {
+          top: -1.6rem;
+          left: -1.6rem;
+        }
+      }
     }
 
     &::before {
@@ -159,11 +216,20 @@ body {
         border-radius: 50%;
         margin-right: 2.3rem;
         margin-top: 1rem;
+
+        @include respond(phone) {
+          margin: 0;
+          margin-bottom: 1.6rem;
+        }
       }
     }
 
     &-contact {
       align-items: center;
+
+      @include respond(phone) {
+        flex-direction: row;
+      }
     }
   }
 
@@ -171,6 +237,12 @@ body {
     display: inline-block;
     width: 44.5rem;
     margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      width: 32.7rem;
+      text-align: center;
+      margin-bottom: 4.8rem;
+    }
   }
 }
 
@@ -196,6 +268,11 @@ body {
   @include respond(tablet) {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.8rem);
+  }
+
+  @include respond(phone) {
+    padding-top: 14rem;
+    padding-bottom: calc(16.4rem - 4.8rem);
   }
 }
 
@@ -233,13 +310,21 @@ body {
     background-image: url(../../images/section4-img@2x.png);
   }
 
-  @include respond (tablet) {
-    background-position: left 7.8rem;
+  // @include respond (tablet) {
+  //   background-position: left 7.8rem;
+  // }
+
+  @include respond(phone) {
+    padding: 8.3rem;
   }
 
   & .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 }

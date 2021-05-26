@@ -8,12 +8,20 @@
     line-height: 3.2rem;
   }
 
+
+
   &--build {
     width: 44.5rem;
     position: relative;
 
     @include respond(tablet) {
       margin-bottom: 6.4rem;
+    }
+
+    @include respond(phone) {
+      width: 24rem;
+      margin-bottom: 5.6rem;
+      margin-bottom: 7.2rem;
     }
 
     &::before {
@@ -36,13 +44,23 @@
       width: 57.3rem;
     }
 
+    @include respond(phone) {
+      width: 32.7rem;
+    }
+
     &__span {
       color: $color-blue-c7
     }
   }
 
   &--started {
-    color: $color-green-34
+    color: $color-green-34;
+
+    @include respond(phone) {
+      width: 32.7rem;
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
   }
 }
 
@@ -59,11 +77,19 @@
   &--build {
     color: $color-light-coral;
     margin-bottom: 1.6rem;
+
+    @include respond(phone) {
+      margin-bottom: .8rem;
+    }
   }
 
   &--success {
     margin-bottom: .2rem;
     color: $color-blue-c7;
+
+    @include respond(tablet) {
+      font-size: 1.8rem;
+    }
   }
 
   &--about {
@@ -71,6 +97,12 @@
 
     @include respond(tablet) {
       width: 46rem;
+    }
+
+    @include respond(phone) {
+      width: 32.7rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &::before {
@@ -92,12 +124,25 @@
 
       @include respond(tablet) {
         width: 23.3rem;
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
 
   &--contact {
     color: $color-white;
+
+    @include respond(phone) {
+      margin-left: 2.3rem;
+      margin-top: -4rem;
+      width: 20rem;
+      text-align: start;
+    }
   }
 }
 
@@ -119,6 +164,10 @@
       width: 57.3rem;
       margin-bottom: 1.6rem;
     }
+
+    @include respond(phone) {
+      width: 32.7rem;
+    }
   }
 
   &--footer {
@@ -130,6 +179,10 @@
       width: 28rem;
       text-align: end;
     }
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &--communication {
@@ -138,6 +191,10 @@
 
     @include respond(tablet) {
       margin-top: 0;
+    }
+
+    @include respond(phone) {
+      text-align: center;
     }
   }
 
@@ -148,6 +205,11 @@
 
     @include respond(tablet) {
       width: 23.3rem;
+    }
+
+    @include respond(phone) {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -166,6 +228,10 @@
   @include respond(tablet) {
     width: 57.3rem;
     margin-bottom: 4.8rem;
+  }
+
+  @include respond(phone) {
+    width: 32.7rem;
   }
 
   &::after {
@@ -214,6 +280,12 @@
     margin-bottom: 2.4rem;
     line-height: 5.6rem;
   }
+
+  @include respond(phone) {
+    margin-bottom: 1.6rem;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 
 .director {
@@ -226,7 +298,10 @@
 
   position: relative;
 
-
+  @include respond(phone) {
+    width: 100%;
+    margin-bottom: 5.2rem;
+  }
 
   &::before {
     @include badimg(9.6rem, 9.6rem, '../images/nikita.png');

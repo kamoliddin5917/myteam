@@ -1,6 +1,10 @@
 .nav {
   margin-left: 8rem;
 
+  @include respond(phone) {
+    display: none
+  }
+
   &__ul {
     @extend %aligncenter;
   }
@@ -8,6 +12,16 @@
   &__list {
     list-style: none;
     margin-right: 4rem;
+
+    @include respond(phone) {
+      margin-right: 0;
+    }
+
+    &-1 {
+      @include respond(phone) {
+        margin-right: 2.4rem;
+      }
+    }
   }
 
   &__link {
@@ -21,5 +35,9 @@
   &--footer {
     margin-left: 0;
     margin-top: 2.5rem;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 }
